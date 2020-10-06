@@ -8,7 +8,10 @@ const app = express();
 
 // initialisation de la base de données mongodb via la librairie mongojs
 var mongojs = require("mongojs");
-var db = mongojs("localhost:27017/GameSocket", ["compte"]);
+//var db = mongojs("localhost:27017/GameSocket", ["compte"]);
+var db = mongojs("https://git.heroku.com/socket-play.git/GameSocket", [
+  "compte",
+]);
 
 // initialisation de la racine de l'app et creation des routes
 app.use(express.static(__dirname + "/client/"));

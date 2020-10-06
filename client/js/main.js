@@ -1,7 +1,8 @@
 // chargement de la page
 window.addEventListener("DOMContentLoaded", () => {
   // initialisation de la connexion client/serveur
-  const socket = io("http://127.0.0.1:2000/");
+  //const socket = io("http://127.0.0.1:2000/");
+  const socket = io("https://git.heroku.com/socket-play.git");
 
   // connexion et inscription
   // const divs = document.getElementById("div");

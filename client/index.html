@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jeux multi joueurs en temps réel</title>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./js/main.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="login">
+      <h1>Bienvenue dans le Socket Game</h1>
+      <p>
+        Les règles du jeu sont simples : Utilisez les touches Flèches du clavier
+        pour vous déplacer et rejoignez l'élément
+        <strong> $</strong> avant vos adversaires sans vous faire prendre pars
+        l'un des ennemis et gagnez la partie ! Votre avatar est constitué d’une
+        fraction avec votre score au numérateur et le numéro du joueur au
+        dénominateur. Vous augmentez votre score au passage après chaque
+        obstacle franchi. Si vous croiser l élément <strong> % </strong> votre
+        vitesse de déplacement ce réduit et celle-ci s’augmente si vous croiser
+        l’élément <strong>£</strong>. <br />
+        <br />
+        Connectez-vous a votre compte si non créer un compte
+      </p>
+
+      <br />
+      <br />
+      <label> Pseudo: <input type="text" id="pseudo" /> </label>
+      <label> Mot de passe : <input type="password" id="mdp" /> </label> <br />
+      <br />
+      <button id="connexion">se connecter</button>
+      <button id="inscription">s'inscrire</button>
+    </div>
+    <br />
+    <br />
+
+    <div id="game" style="display: none">
+      <canvas
+        id="canvas"
+        width="500"
+        height="500"
+        style="border: 1px solid #000000"
+      >
+        <p>
+          Désolé, votre navigateur ne supporte pas Canvas. Mettez-vous à jour
+        </p>
+      </canvas>
+    </div>
+  </body>
+</html>

@@ -5,11 +5,12 @@
 const path = require("path");
 const express = require("express");
 const app = express();
+const PORT = process.env.PORT || 2000;
 
 // initialisation de la base de données mongodb via la librairie mongojs
 var mongojs = require("mongojs");
 //var db = mongojs("localhost:27017/GameSocket", ["compte"]);
-var db = mongojs("https://socket-play.herokuapp.com/GameSocket", ["compte"]);
+var db = mongojs("localhost:27017/GameSocket", ["compte"]);
 
 // initialisation de la racine de l'app et creation des routes
 app.use(express.static(__dirname + "/client/"));
@@ -28,7 +29,7 @@ app.all((error, req, res, next) => {
     );
 });
 
-const server = app.listen(2000, () => {
+const server = app.listen(PORT, () => {
   console.log("server écoute sur le port 2000");
 });
 

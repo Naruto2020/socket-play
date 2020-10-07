@@ -2,7 +2,7 @@
 window.addEventListener("DOMContentLoaded", () => {
   // initialisation de la connexion client/serveur
   //const socket = io("http://127.0.0.1:2000/");
-  const socket = io("https://socket-play.herokuapp.com/");
+  const socket = io("http://127.0.0.1:2000/");
 
   // connexion et inscription
   // const divs = document.getElementById("div");

@@ -12,7 +12,7 @@ var mongojs = require("mongojs");
 //var db = mongojs("localhost:27017/GameSocket", ["compte"]);
 var db = mongojs(
   "mongodb+srv://steve:Kmia@0703@cluster0.d3ima.mongodb.net/GameSocket",
-  ["compte"]
+  ["comptes"]
 );
 /*var db = mongojs(process.env.MONGODB_URI || "localhost:27017/GameSocket", [
   "compte",

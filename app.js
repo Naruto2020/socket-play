@@ -713,7 +713,7 @@ ioServer.on("connect", (socket) => {
     id: "" + Math.floor(calcule * 100),
     x: 30,
     y: 380,
-    vitX: 12,
+    vitX: 9,
     //vitY: 3,
 
     inimicus: function () {
@@ -742,7 +742,7 @@ ioServer.on("connect", (socket) => {
     id: "" + Math.floor(calcule * 100),
     x: 480,
     y: 260,
-    vitX: 15,
+    vitX: 11,
     //vitY: 3,
 
     inimicus: function () {
@@ -771,7 +771,7 @@ ioServer.on("connect", (socket) => {
     id: "" + Math.floor(calcule * 100),
     x: 480,
     y: 130,
-    vitX: 15,
+    vitX: 13,
     //vitY: 3,
 
     inimicus: function () {
@@ -800,7 +800,7 @@ ioServer.on("connect", (socket) => {
     id: "" + Math.floor(calcule * 100),
     x: 30,
     y: 90,
-    vitX: 17,
+    vitX: 15,
     //vitY: 3,
 
     inimicus: function () {

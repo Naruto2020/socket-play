@@ -65,8 +65,20 @@ window.addEventListener("DOMContentLoaded", () => {
   // jeux
 
   // initialisation du canvas
-  var ctx = document.getElementById("canvas").getContext("2d");
+  var canvas = document.getElementById("canvas");
+  var ctx = canvas.getContext("2d");
   ctx.font = "17px Arial";
+  /* let Width = 500;
+  let Heigth = 500;
+  let resizeCanvas = () => {
+    Width = window.innerWidth;
+    Heigth = window.innerHeight;
+    canvas.width = Width;
+    canvas.heigth = Heigth;
+  };
+  window.addEventListener("resize", () => {
+    resizeCanvas();
+  });*/
 
   // initialisation des joueurs et de leurs coordonnées a chaque connexion
 

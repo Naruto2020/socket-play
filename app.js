@@ -10,9 +10,13 @@ const PORT = process.env.PORT || 2000;
 // initialisation de la base de données mongodb via la librairie mongojs
 var mongojs = require("mongojs");
 //var db = mongojs("localhost:27017/GameSocket", ["compte"]);
-var db = mongojs(process.env.MONGODB_URI || "localhost:27017/GameSocket", [
+var db = mongojs(
+  "mongodb+srv://steve:Kmia@0703@cluster0.d3ima.mongodb.net/GameSocket",
+  ["compte"]
+);
+/*var db = mongojs(process.env.MONGODB_URI || "localhost:27017/GameSocket", [
   "compte",
-]);
+]);*/
 
 // initialisation de la racine de l'app et creation des routes
 app.use(express.static(__dirname + "/client/"));
@@ -81,7 +85,7 @@ ioServer.on("connect", (socket) => {
 
   const mdpValide = (data, cb) => {
     // parcour de la base de données pour rechercher les pseudo/mdp saisie par l'Ut
-    db.compte.find({ pseudo: data.pseudo, mdp: data.mdp }, (err, res) => {
+    db.comptes.find({ pseudo: data.pseudo, mdp: data.mdp }, (err, res) => {
       // verrification et utilisation du call back pour confirmer que les bons pseudos/mdp ont été saisie
       if (res.length > 0) {
         cb(true);
@@ -93,7 +97,7 @@ ioServer.on("connect", (socket) => {
   // on verrifie si un pseudo est déjas pris
   const utDejasPris = (data, cb) => {
     // parcour de la base de données pour rechercher les pseudo saisie par l'Ut
-    db.compte.find({ pseudo: data.pseudo }, (err, res) => {
+    db.comptes.find({ pseudo: data.pseudo }, (err, res) => {
       // verrification et utilisation du call back pour confirmer que les bons pseudos ne  sont pas déjas pris
       if (res.length > 0) {
         cb(true);
@@ -105,7 +109,7 @@ ioServer.on("connect", (socket) => {
   // on ajoute un nouveau pseudo/mdp après verrification
   const ajoutUt = (data, cb) => {
     // parcour de la base de données pour ajouter les pseudo/mdp saisie par l'Ut
-    db.compte.insertOne({ pseudo: data.pseudo, mdp: data.mdp }, (err) => {
+    db.comptes.insertOne({ pseudo: data.pseudo, mdp: data.mdp }, (err) => {
       cb();
     });
   };

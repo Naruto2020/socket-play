@@ -10,7 +10,9 @@ const PORT = process.env.PORT || 2000;
 // initialisation de la base de données mongodb via la librairie mongojs
 var mongojs = require("mongojs");
 //var db = mongojs("localhost:27017/GameSocket", ["compte"]);
-var db = mongojs("localhost:27017/GameSocket", ["compte"]);
+var db = mongojs(process.env.MONGODB_URI || "localhost:27017/GameSocket", [
+  "compte",
+]);
 
 // initialisation de la racine de l'app et creation des routes
 app.use(express.static(__dirname + "/client/"));

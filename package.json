@@ -10,9 +10,12 @@
     "nodemon": "^2.0.4",
     "socket.io": "^2.3.0"
   },
+  "engines": {
+    "node": "14.6.x"
+  },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "staet": "node app.js"
   },
   "author": "Steve Kounga",
   "license": "ISC"

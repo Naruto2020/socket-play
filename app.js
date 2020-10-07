@@ -771,7 +771,7 @@ ioServer.on("connect", (socket) => {
     id: "" + Math.floor(calcule * 100),
     x: 480,
     y: 130,
-    vitX: 18,
+    vitX: 15,
     //vitY: 3,
 
     inimicus: function () {
@@ -800,7 +800,7 @@ ioServer.on("connect", (socket) => {
     id: "" + Math.floor(calcule * 100),
     x: 30,
     y: 90,
-    vitX: 20,
+    vitX: 17,
     //vitY: 3,
 
     inimicus: function () {

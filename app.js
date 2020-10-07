@@ -30,7 +30,7 @@ app.all((error, req, res, next) => {
 });
 
 const server = app.listen(PORT, () => {
-  console.log("server écoute sur le port 2000");
+  console.log("server écoute sur le port" + " " + PORT);
 });
 
 //Partie WebSocket
